@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import numpy as np
 
-from rbffunctions import *
 
 import plotly.express as px
 import plotly.graph_objects as go
