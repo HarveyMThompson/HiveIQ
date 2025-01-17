@@ -1,6 +1,6 @@
-matplotlib==3.8.0
-numpy==1.23.5
-plotly==5.17.0
-scipy==1.15.1
-streamlit==1.39.0
-~andas==1.5.3
+matplotlib
+numpy
+plotly
+scipy
+streamlit
+~andas
