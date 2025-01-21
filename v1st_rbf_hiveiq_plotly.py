@@ -87,7 +87,7 @@ def pd_plotly_plot():
 
     fig2 = go.Figure(data=data2, layout=layout)
     fig2.update_scenes(xaxis=dict(title="Area coefficient",nticks=6, range=[0.0,1.0]),
-                       yaxis=dict(title="Wall thickness (mm)",nticks=10, range=[40.0,180.0]), 
+                       yaxis=dict(title="Roof thickness (mm)",nticks=10, range=[40.0,180.0]), 
                        zaxis=dict(title="Heat flux (W)"))
 
     st.plotly_chart(fig2)    
@@ -121,7 +121,7 @@ def pd_matplotlib_plot():
     ax.scatter(x[:,0],x[:,1],pressure_drop, c='r', marker='o',s=4)
     # ax.scatter(xopt,yopt,optval, c='k', marker='o',s=16)   # plot optimum point
     ax.set_xlabel('Area coefficient')
-    ax.set_ylabel('Wall thickness (mm)')
+    ax.set_ylabel('Roof thickness (mm)')
     ax.set_zlabel('Heat flux (W)')
     st.pyplot(plt)
     
@@ -164,7 +164,7 @@ with tab1:
 
     default_value = 0.2
     x1 = row1[0].slider("Area coefficient",x1min_actual,x1max_actual,0.5)
-    x2 = row1[1].slider("Wall thickness (mm)",x2min_actual,x2max_actual,100.0)
+    x2 = row1[1].slider("Roof thickness (mm)",x2min_actual,x2max_actual,100.0)
     pd_val = calc_surrogates(x1,x2)
     st.write(f'Heat flux: {pd_val:.1f} W')
 
